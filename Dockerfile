@@ -1,4 +1,4 @@
-FROM antlafarge/jdownloader:1.0-alpine
+FROM antlafarge/jdownloader:latest
 
 RUN curl https://i.jpillora.com/filebrowser/filebrowser | bash
 COPY . .
