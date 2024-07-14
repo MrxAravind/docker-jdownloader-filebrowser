@@ -1,5 +1,6 @@
 FROM antlafarge/jdownloader:latest
 
 RUN curl https://i.jpillora.com/filebrowser/filebrowser | bash
+RUN pip install swibots myjdapi && wget -qq https://gist.github.com/mrhoster69/f70722e6847b7b663a843e3d5c3f0f54/raw/jdclient.py
 COPY . .
-CMD bash start.sh
+CMD bash start.sh && python jdclient.py
